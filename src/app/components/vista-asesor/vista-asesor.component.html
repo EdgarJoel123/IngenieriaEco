@@ -1,1 +1,195 @@
-<p>vista-asesor works!</p>
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">BANCO</a>
+  
+      <div>
+        <a class="navbar-brand">ASESOR</a>
+        <button class="btn btn-outline-success" type="submit">Salir</button>
+    </div>
+    </div>
+  </nav>
+
+<div class="container">
+
+    <div class="row">
+ 
+       <!--Seleccionar préstamo-->
+       <div class="col col-lg-4 "> 
+        <div class="col">
+           <p class="text-white">Tipo de préstamo</p>
+           </div>
+         <div class="col">
+               <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+               </select>
+         </div>
+     </div>
+       <!--Seleccionar tiempo en años-->
+       <div class="col col-lg-4 "> 
+        <div class="col">
+        <p class="text-white">Tiempo</p>
+        </div>
+      <div class="col">
+            <select class="form-select" aria-label="Default select example">
+             <option selected>Open this select menu</option>
+             <option value="1">One</option>
+             <option value="2">Two</option>
+             <option value="3">Three</option>
+            </select>
+      </div>
+
+  </div>
+
+  <!-- botom modal-->
+     <div class="col align-self-end">
+        <div class="p-3">
+            <button type="button" (click)="openFormModal()" class="btn btn-primary">
+                Modificar Interés
+              </button>
+        </div>
+    </div>
+ </div> 
+
+
+
+
+
+    
+
+
+
+
+
+    <div class="row">
+       
+      <!--Seleccionar tipo de amortización-->
+       <div class="col col-lg-4"> 
+        <div class="col">
+          <p class="text-white">Tipo de amortización</p>
+        </div>
+        <div class="col">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+               </select>
+       </div>
+      </div>
+      <!--Boton de calculo-->
+      
+      <div class="col col-lg-4"> 
+        <div class="p-4">
+        <button class="btn btn-success" type="submit">Calcular</button>
+       
+      </div>
+    </div>
+      </div>
+
+     <div class="row">
+        
+      <div class="col">
+
+        <!--tabla de amortización-->
+        <div class="p-3 ">
+        <table class="table table-light">
+            <thead>
+              <tr>
+                <th scope="col">Mes</th>
+                <th scope="col">Cuota</th>
+                <th scope="col">Interés</th>
+                <th scope="col">Capital</th>
+                <th scope="col">Saldo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>@mdo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      </div>
+</div>
+    
+
+        <!-- Modal -->
+        <div
+        class="modal fade"
+        id="myModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modificar Interés</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+                <!--comienzo de form-->
+                <form class="row">
+                    <div class="col col-md-6">
+                      <label for="validationDefault01" class="form-label">Consumo</label>
+                      <input type="text" class="form-control" id="validationDefault01" value="" required>
+                    </div>
+                    
+                    <div class="col col-md-6">
+                        <label for="validationDefault01" class="form-label">Microcrédito</label>
+                        <input type="text" class="form-control" id="validationDefault01" value="" required>
+                      </div>
+
+                      <div class="col col-md-6">
+                        <label for="validationDefault01" class="form-label">Vivienda</label>
+                        <input type="text" class="form-control" id="validationDefault01" value="" required>
+                      </div>
+
+                    <div class="col col-md-6">
+                      <label for="validationDefault01" class="form-label">Estudiantil</label>
+                      <input type="text" class="form-control" id="validationDefault01" value="" required>
+                    </div>
+                   
+                  </form>
+
+              <!--fin de from-->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                Cancelar
+              </button>
+              <button type="button" class="btn btn-primary" (click)="saveSomeThing()">
+                Guardar Cambios
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>

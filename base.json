@@ -25,23 +25,10 @@
   ],
   "entidadFinanciera": [
     {
-      "id": "0",
-      "TIPO": "n/a",
-      "NOMBRE": "n/a",
-      "CONSUMO": "0.00",
-      "TCONSUMO": "0",
-      "MICROCREDITO": "0.00",
-      "TMICROCREDITO": "0",
-      "VIVIENDA": "0.00",
-      "TVIVIENDA": "0",
-      "ESTUDIANTIL": "0.00",
-      "TESTUDIANTIL": "0"
-    },
-    {
       "id": "1",
       "TIPO": "BANCO",
       "NOMBRE": "BANCO PICHINCHA",
-      "CONSUMO": "15.60",
+  
       "TCONSUMO": "20",
       "MICROCREDITO": "25.12",
       "TMICROCREDITO": "10",
