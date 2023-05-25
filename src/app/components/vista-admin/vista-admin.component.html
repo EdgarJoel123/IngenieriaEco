@@ -39,43 +39,211 @@
 
   <div class="col col-lg-6">
       <div class="p-3 ">
-        <table class="table table-light">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Comercial</th>
-                <th scope="col">Estuadiantil</th>
-                <th scope="col">Microcredito</th>
-                <th scope="col">el otro</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Estudiantil</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@twitter</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat </td>
-                <td>@twitter</td>
-                
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-              </tr>
-              
-            </tbody>
-          </table>
+        <!--comienzo de form-->
+        <form class="row">
+          <div class="col col-md-6">
+            <label for="validationDefault01" class="form-label text-white">Consumo</label>
+            <input type="text" class="form-control" id="validationDefault01" value="" required>
+          </div>
+          
+          <div class="col col-md-6">
+              <label for="validationDefault01" class="form-label text-white">Microcrédito</label>
+              <input type="text" class="form-control" id="validationDefault01" value="" required>
+            </div>
+
+            <div class="col col-md-6">
+              <label for="validationDefault01" class="form-label text-white">Vivienda</label>
+              <input type="text" class="form-control" id="validationDefault01" value="" required>
+            </div>
+
+          <div class="col col-md-6">
+            <label for="validationDefault01" class="form-label text-white">Estudiantil</label>
+            <input type="text" class="form-control" id="validationDefault01" value="" required>
+          </div>
+
+          <div class="col col-md-6">
+            <label for="validationDefault01" class="form-label text-white">Asesor</label>
+            <input type="text" class="form-control" id="validationDefault01" value="" >
+          </div>
+
+         
+          <!--botn cambiar asesor-->
+          <div class="col col-md-6">
+            <div class="p-4">
+            <button type="button" (click)="openFormModal()" class="btn btn-danger">
+              Cambiar Asesor
+            </button>
+          </div>
+          </div>
+          <!--fin del boton-->
+
+        </form>
+        <!--Fin del form-->
+          
       </div>
       </div>
 
 </div>
 
+
+    <!-- Modal -->
+    <div
+    class="modal fade"
+    id="myModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Lista de Asesores</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+            <!--comienzo de form-->
+            <form class="row g-2">
+              <div class="col-3">
+                <label for="staticEmail2" class="visually-hidden">N° Cédula</label>
+                <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="N° Cédula">
+              </div>
+              <div class="col-4">
+                <label for="inputPassword2" class="visually-hidden">Cédula</label>
+                <input type="text" class="form-control" id="inputPassword2" placeholder="Cédula">
+              </div>
+              <div class="col-3">
+                <button type="button" class="btn btn-primary mb-3">Buscar</button>
+              </div>
+            </form>
+          <!--fin de from-->
+            <!--Empleado encontrado-->
+            <table class="table table-light">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Cedula</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Apellido</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Rol</th>
+                  <th scope="col">Entidad financiera</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td>@mdo</td>
+                  <td>@mdo</td>
+                  <td>@mdo</td>
+                </tr>
+               
+              </tbody>
+            </table>
+
+            <div class="p-3">
+              <button type="button" (click)="openModalNuevo()" class="btn btn-secondary">
+                Nuevo
+              </button>
+            </div>
+
+            <!--fin empleado encontrado-->
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+            Cancelar
+          </button>
+          <button type="button" class="btn btn-primary" (click)="saveSomeThing()">
+            Asiganar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+   <!-- Modal Añadir Asesor -->
+   <div
+   class="modal fade"
+   id="modalNuevo"
+   tabindex="-1"
+   aria-labelledby="exampleModalLabel"
+   aria-hidden="true"
+ >
+   <div class="modal-dialog">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="exampleModalLabel">Modificar Interés</h5>
+         <button
+           type="button"
+           class="btn-close"
+           data-bs-dismiss="modal"
+           aria-label="Close"
+         ></button>
+       </div>
+       <div class="modal-body">
+           <!--comienzo de form-->
+           <form class="row g-2">
+            <div class="col-auto">
+              <label for="staticEmail2" class="visually-hidden">N° Cédula</label>
+              <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="N° Cédula">
+            </div>
+
+            <div class="col-4">
+              <label for="inputPassword2" class="visually-hidden">Cédula</label>
+              <input type="text" class="form-control" id="inputPassword2" placeholder="Cédula">
+            </div>
+
+            <div class="col-auto">
+              <label for="staticEmail2" class="visually-hidden">Nombre</label>
+              <input type="text" readonly class="form-control-plaintext" id="Nombre" value="Nombre">
+            </div>
+
+            <div class="col-4">
+              <label  class="visually-hidden">Nombre</label>
+              <input type="text" class="form-control" id="inputPassword2" placeholder="Nombre">
+            </div>
+            
+            <div class="col-auto">
+              <label class="visually-hidden">Apellido</label>
+              <input type="text" readonly class="form-control-plaintext" id="apellido1" value="Apellido">
+            </div>
+
+            <div class="col-4">
+              <label class="visually-hidden">Apellido</label>
+              <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+            </div>
+
+            <div class="col-auto">
+              <label class="visually-hidden">E-mail</label>
+              <input type="text" readonly class="form-control-plaintext" id="email" value="E-mail">
+            </div>
+
+            <div class="col-4">
+              <label class="visually-hidden">Apellido</label>
+              <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+            </div>
+
+          </form>
+
+         <!--fin de from-->
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+           Cancelar
+         </button>
+         <button type="button" class="btn btn-primary" (click)="closeNuevo()">
+           Guardar Cambios
+         </button>
+       </div>
+     </div>
+   </div>
+ </div>

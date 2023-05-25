@@ -8,6 +8,9 @@ import { LoginComponent } from './components/login/login.component';
 import { VistaAdminComponent } from './components/vista-admin/vista-admin.component';
 import { VistaAsesorComponent } from './components/vista-asesor/vista-asesor.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -24,6 +27,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    FormsModule
  
    
   ],
