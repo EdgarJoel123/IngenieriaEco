@@ -78,7 +78,7 @@
         <p class="text-white">Monto</p>
         </div>
       <div class="col">
-        <input type="text" class="form-control" id="validationDefault01" value=""  [(ngModel)]="monto"  required>
+        <input type="number" [(ngModel)]="monto" id="monto" class="form-control" placeholder="Ingrese el monto que desea $" aria-label="Default select example">
       </div>
 
   </div>
@@ -110,25 +110,12 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@mdo</td>
+              <tr *ngFor="let fila of amortizacion">
+                <th scope="row">{{ fila.mes }}</th>
+                <td>{{ fila.cuota }}</td>
+                <td>{{ fila.interes }}</td>
+                <td>{{ fila.capital }}</td>
+                <td>{{ fila.saldo }}</td>
               </tr>
             </tbody>
           </table>

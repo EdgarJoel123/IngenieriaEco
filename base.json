@@ -28,7 +28,7 @@
       "id": "1",
       "TIPO": "BANCO",
       "NOMBRE": "BANCO PICHINCHA",
-      "CONSUMO": "15.20",
+      "CONSUMO": 15.20,
       "TCONSUMO": "20",
       "MICROCREDITO": "25.12",
       "TMICROCREDITO": "10",
