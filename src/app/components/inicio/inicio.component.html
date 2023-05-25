@@ -40,9 +40,9 @@
     <div *ngIf="selectedEntidadFinanciera">
       <h2 style="color: white">Datos de {{ selectedEntidadFinanciera.NOMBRE }}:</h2>
       <div *ngFor="let data of getSelectedEntidadFinancieraData()">
-        <p style="color: white" (click)="selectedPorcentaje = data.key; selectedValue = data.value" *ngIf="data.key === selectedValue">{{ data.key }}: {{ data.value }}</p>
+        <p style="color: white" (click)="selectedPorcentaje = data.key; selectedDataValue = data.value" *ngIf="data.key === selectedValue">{{ data.key }}: {{ data.value }}</p>
       </div>
-           
+      
           </div>
   </form>
 
@@ -78,18 +78,19 @@
         <p class="text-white">Tipo de amortización</p>
       </div>
       <div class="col">
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" [(ngModel)]="tipoAmortizacion" (change)="seleccionarTipoAmortizacion()">
           <option selected>Selecciona un tipo de amortización</option>
-          <option value="1">Fransera </option>
+          <option value="1">Francesa</option>
           <option value="2">Alemana</option>
         </select>
+        
       </div>
     </div>
     <!--Boton de calculo-->
     <div class="col col-lg-4">
-      <button class="btn btn-success" type="submit" (click)="calcular()">Calcular</button>
-
+      <button class="btn btn-success" type="submit" (click)="seleccionarTipoAmortizacion()">Calcular</button>
     </div>
+    
   </div>
 
   <div class="row">

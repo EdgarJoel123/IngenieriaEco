@@ -10,21 +10,29 @@ export class InicioComponent implements OnInit {
 
   entidadFinancieraData: any[];
   selectedEntidadFinanciera: any;
-  selectedValue: string = '';
+  //selectedValue: string = '';
   selectedData: any;
- // selectedPorcentaje: number;
+  // selectedPorcentaje: number;
 
   selectedPorcentaje: number
   anios: number;
   monto: number;
   amortizacion: any[] = [];
+ // valorPorcentaje: number = 1.5;
+
+selectedValue: string;
+selectedDataValue: number;
+
+tipoAmortizacion: string;
+
+
 
 
   data = {
     key: '',
     value: ''
   };
-  
+
   opcionesPrestamo: any = {
     CONSUMO: "CONSUMO",
     MICROCREDITO: "MICROCREDITO",
@@ -76,33 +84,30 @@ export class InicioComponent implements OnInit {
     return [];
   }
 
-
-  /*calcular() {
+  calcularFrancesa() {
     this.amortizacion = [];
-    //const selectedValueNumber = parseFloat(this.selectedValue.replace(',', '.'));
-    this.calcularAmortizacion(this.selectedPorcentaje, this.anios, this.monto);
-    //console.log(this.selectedValue)
-  }*/
-
-  calcular() {
-  this.amortizacion = [];
-  const valueMatch = this.selectedValue.match(/:\s*([\d.]+)/);
-  if (valueMatch) {
-    const selectedValueNumber = parseFloat(valueMatch[1]);
-    if (!isNaN(selectedValueNumber)) {
-      this.calcularAmortizacion(selectedValueNumber, this.anios, this.monto);
-    } else {
-      console.error("El valor numérico no es válido.");
+    const selectedData = this.getSelectedEntidadFinancieraData().find(data => data.key === this.selectedValue);
+    if (selectedData) {
+      this.selectedDataValue = parseFloat(selectedData.value);
+      this.calcularAmortizacionFrancesa(this.selectedDataValue, this.anios, this.monto);
+      console.log(this.selectedDataValue);
     }
-  } else {
-    console.error("El formato no coincide (no se encontró el valor numérico).");
   }
-}
 
-  
-  
-  
-  calcularAmortizacion(porcentaje: number, años: number, monto: number) {
+  calcularAlemana() {
+    this.amortizacion = [];
+    const selectedData = this.getSelectedEntidadFinancieraData().find(data => data.key === this.selectedValue);
+    if (selectedData) {
+      this.selectedDataValue = parseFloat(selectedData.value);
+      this.calcularAmortizacionAlemana(this.selectedDataValue, this.anios, this.monto);
+      console.log(this.selectedDataValue);
+    }
+  }
+
+
+
+
+  calcularAmortizacionFrancesa(porcentaje: number, años: number, monto: number) {
     const meses = años * 12;
     const tasaMensual = porcentaje / 12 / 100;
     const cuota = (monto * tasaMensual) / (1 - Math.pow(1 + tasaMensual, -meses));
@@ -125,5 +130,42 @@ export class InicioComponent implements OnInit {
       this.amortizacion.push(fila);
     }
   }
+
+  calcularAmortizacionAlemana(porcentaje: number, años: number, monto: number) {
+    const meses = años * 12;
+    const tasaMensual = porcentaje / 12 / 100;
+    const cuotaCapital = monto / meses;
   
+    let saldo = monto;
+    let interesTotal = 0;
+  
+    for (let mes = 1; mes <= meses; mes++) {
+      const interes = saldo * tasaMensual;
+      const cuota = cuotaCapital + interes;
+      saldo -= cuotaCapital;
+      interesTotal += interes;
+  
+      const fila = {
+        mes: mes,
+        cuota: cuota.toFixed(2),
+        interes: interes.toFixed(2),
+        capital: cuotaCapital.toFixed(2),
+        saldo: saldo.toFixed(2),
+        interesTotal: interesTotal.toFixed(2)
+      };
+  
+      this.amortizacion.push(fila);
+    }
+  }
+  
+
+  seleccionarTipoAmortizacion() {
+    if (this.tipoAmortizacion === '1') {
+      this.calcularFrancesa();
+    } else if (this.tipoAmortizacion === '2') {
+      this.calcularAlemana();
+    }
+  }
+  
+
 }
