@@ -9,8 +9,7 @@
 
 <div class="container">
   <div class="row">
-    Seleccionar entidad financiera
-    <div class="col col-lg-4">
+    <div class="col-lg-4">
       <div class="col">
         <p class="text-white">Entidad Financiera:</p>
       </div>
@@ -21,9 +20,8 @@
         </select>
       </div>
     </div>
-    
-    Seleccionar préstamo
-    <div class="col col-lg-4">
+
+    <div class="col-lg-4">
       <div class="col">
         <p class="text-white">Tipo de préstamo</p>
       </div>
@@ -35,67 +33,61 @@
       </div>
     </div>
   </div>
-  
+
   <form action="">
     <div *ngIf="selectedEntidadFinanciera">
       <h2 style="color: white">Datos de {{ selectedEntidadFinanciera.NOMBRE }}:</h2>
       <div *ngFor="let data of getSelectedEntidadFinancieraData()">
-        <p style="color: white" (click)="selectedPorcentaje = data.key; selectedDataValue = data.value" *ngIf="data.key === selectedValue">{{ data.key }}: {{ data.value }}</p>
+        <p style="color: white" (click)="selectedPorcentaje = data.key; selectedDataValue = data.value"
+          *ngIf="data.key === selectedValue">{{ data.key }}: {{ data.value }}</p>
       </div>
-      
-          </div>
+    </div>
   </form>
 
-
-  <!-- Porcentaje correspondiente al tipo de préstamo seleccionado 
-  <div *ngIf="selectedTipo && entidadSeleccionada">
-    <input type="text" [value]="obtenerPorcentaje(selectedTipo)" readonly>
-  </div>
--->
-
   <div class="row">
-    <!--Seleccionar tiempo en años-->
-    <div class="col col-lg-4">
+    <div class="col-lg-4">
       <div class="col">
         <p class="text-white">Tiempo en Años</p>
       </div>
       <div class="col">
-        <input type="number" [(ngModel)]="anios" id="tiempo" class="form-control" placeholder="Ingrese un año no mayor a 25" aria-label="Default select example">
+        <input type="number" [(ngModel)]="anios" id="tiempo" class="form-control"
+          placeholder="Ingrese un año no mayor a 25" aria-label="Default select example">
       </div>
+    </div>
 
-          <!--Seleccionar Monto-->
-    <div class="col col-lg-4">
+    <div class="col-lg-4">
       <div class="col">
         <p class="text-white">Monto del Prestamo</p>
       </div>
       <div class="col">
-        <input type="number" [(ngModel)]="monto" id="monto" class="form-control" placeholder="Ingrese el monto que desea $" aria-label="Default select example">
+        <input type="number" [(ngModel)]="monto" id="monto" class="form-control"
+          placeholder="Ingrese el monto que desea $" aria-label="Default select example">
       </div>
-    
-    <!--Seleccionar tipo de amortización-->
-    <div class="col col-lg-4">
+    </div>
+
+    <div class="col-lg-4">
       <div class="col">
         <p class="text-white">Tipo de amortización</p>
       </div>
       <div class="col">
         <select class="form-select" [(ngModel)]="tipoAmortizacion" (change)="seleccionarTipoAmortizacion()">
-          <option selected>Selecciona un tipo de amortización</option>
+          <option value="">Selecciona un tipo de amortización</option>
           <option value="1">Francesa</option>
           <option value="2">Alemana</option>
         </select>
-        
       </div>
     </div>
-    <!--Boton de calculo-->
-    <div class="col col-lg-4">
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4">
+      <br>
       <button class="btn btn-success" type="submit" (click)="seleccionarTipoAmortizacion()">Calcular</button>
     </div>
-    
   </div>
 
   <div class="row">
     <div class="col">
-      <!--tabla de amortización-->
       <div class="p-3">
         <table class="table table-light">
           <thead>
@@ -119,6 +111,5 @@
         </table>
       </div>
     </div>
-
   </div>
 </div>

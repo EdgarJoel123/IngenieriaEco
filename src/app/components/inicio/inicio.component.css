@@ -1,13 +1,15 @@
-.example-icon {
-    padding: px;
-  }
-.example-spacer {
-    flex: auto;
-  }
-
 .toolbar{
     color: d55Color;
     background-color: whiteColor;
     display: flex;
     justify-content: center;
   }
+
+  .example-icon {
+    padding: 0px;
+  }
+  
+  .example-spacer {
+    flex: auto;
+  }
+  
