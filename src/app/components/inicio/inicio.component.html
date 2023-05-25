@@ -26,28 +26,29 @@
             </select>
         </div>
       </div> 
+       <!--Seleccionar préstamo-->
+       <div class="col col-lg-4 "> 
+        <div class="col">
+           <p class="text-white">Tipo de préstamo</p>
+           </div>
+         <div class="col">
+               <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+               </select>
+         </div>
+     </div>
     </div>
 
     <div class="row">
-        <!--Seleccionar préstamo-->
-      <div class="col col-lg-4 "> 
-         <div class="col">
-            <p class="text-white">Tipo de préstamo</p>
-            </div>
-          <div class="col">
-                <select class="form-select" aria-label="Default select example">
-                 <option selected>Open this select menu</option>
-                 <option value="1">One</option>
-                 <option value="2">Two</option>
-                 <option value="3">Three</option>
-                </select>
-          </div>
-      </div>
+       
     
-      <!--Seleccionar tipo de amortización-->
+      <!--Seleccionar tiempo en años-->
       <div class="col col-lg-4 "> 
             <div class="col">
-            <p class="text-white">Tipo de amortización</p>
+            <p class="text-white">Tiempo</p>
             </div>
           <div class="col">
                 <select class="form-select" aria-label="Default select example">
@@ -60,10 +61,10 @@
       </div>
 
        
-      <!--Seleccionar tiempo en años-->
+      <!--Seleccionar tipo de amortización-->
        <div class="col col-lg-4"> 
         <div class="col">
-          <p class="text-white">Tiempo</p>
+          <p class="text-white">Tipo de amortización</p>
         </div>
         <div class="col">
             <select class="form-select" aria-label="Default select example">
@@ -73,6 +74,11 @@
                 <option value="3">Three</option>
                </select>
        </div>
+      </div>
+      <!--Boton de calculo-->
+      <div class="col col-lg-4"> 
+        <button class="btn btn-success" type="submit">Calcular</button>
+       
       </div>
 
       </div>
@@ -86,10 +92,11 @@
         <table class="table table-light">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Mes</th>
+                <th scope="col">Cuota</th>
+                <th scope="col">Interés</th>
+                <th scope="col">Capital</th>
+                <th scope="col">Saldo</th>
               </tr>
             </thead>
             <tbody>
@@ -98,17 +105,20 @@
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>@mdo</td>
+                <td>@mdo</td>
               </tr>
               <tr>
                 <th scope="row">2</th>
                 <td>Jacob</td>
                 <td>Thornton</td>
                 <td>@fat</td>
+                <td>@mdo</td>
               </tr>
               <tr>
                 <th scope="row">3</th>
                 <td colspan="2">Larry the Bird</td>
                 <td>@twitter</td>
+                <td>@mdo</td>
               </tr>
             </tbody>
           </table>
