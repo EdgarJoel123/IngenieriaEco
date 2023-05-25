@@ -2,13 +2,14 @@
 <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand">BANCO</a>
-  
+      
       <div>
-        <a class="navbar-brand">ASESOR</a>
+        <a class="navbar-brand">ASESOR  </a>
         <button class="btn btn-outline-success" type="submit">Salir</button>
     </div>
     </div>
   </nav>
+ 
 <!-- botom modal-->
 <div class="row justify-content-end">
 <div class="col col-md-2 align-self-end">
@@ -30,39 +31,28 @@
            <p class="text-white">Tipo de préstamo</p>
            </div>
          <div class="col">
-               <select class="form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-               </select>
+          <select class="form-select" aria-label="Default select example" (change)="capturarPrestamo()" [(ngModel)]="opcionPrestamo">
+            <option selected>Seleccionar prestamo</option>
+            <option value="1">Consumo</option>
+            <option value="2">Microcrédito</option>
+            <option value="3">Vivienda</option>
+            <option value="4">Estudiantil</option>
+           </select>
          </div>
      </div>
        <!--Seleccionar tiempo en años-->
        <div class="col col-lg-4 "> 
         <div class="col">
-        <p class="text-white">Tiempo</p>
+        <p class="text-white">Tiempo en años</p>
         </div>
       <div class="col">
-            <select class="form-select" aria-label="Default select example">
-             <option selected>Open this select menu</option>
-             <option value="1">One</option>
-             <option value="2">Two</option>
-             <option value="3">Three</option>
-            </select>
+        <input type="number" class="form-control" id="validationDefault01" value=""  [(ngModel)]="tiempo"  required>
       </div>
 
   </div>
 
   
  </div> 
-
-
-
-
-
-    
-
 
 
 
@@ -75,19 +65,29 @@
           <p class="text-white">Tipo de amortización</p>
         </div>
         <div class="col">
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+            <select class="form-select" aria-label="Default select example" (change)="capturarAmortizacion()" [(ngModel)]="opcionAmortizacion">
+                <option selected>Tipo de Amortización</option>
+                <option value="1">Alemana</option>
+                <option value="2">Francesa</option>
                </select>
        </div>
       </div>
+      <!--monto -->
+      <div class="col col-lg-4 "> 
+        <div class="col">
+        <p class="text-white">Monto</p>
+        </div>
+      <div class="col">
+        <input type="text" class="form-control" id="validationDefault01" value=""  [(ngModel)]="monto"  required>
+      </div>
+
+  </div>
+
       <!--Boton de calculo-->
       
       <div class="col col-lg-4"> 
         <div class="p-4">
-        <button class="btn btn-success" type="submit">Calcular</button>
+        <button class="btn btn-success" type="button" (click)="llenarTabla()">Calcular</button>
        
       </div>
     </div>
@@ -153,7 +153,7 @@
         <!-- Modal -->
         <div
         class="modal fade"
-        id="myModal"
+        id="myModal" 
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -207,3 +207,4 @@
           </div>
         </div>
       </div>
+      
