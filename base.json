@@ -1,15 +1,93 @@
 {
-    "usuarios": [
-        {"ID":"1","CEDULA":"1850193838","NOMBRE":"Pedro","APELLIDO":"Lopez","USUARIO":"plopez","CONTRASENA":"cGxvcGV6","EMAIL":"plopez38@gmail.com","ROL":"ADMIN","BANCO":"0"},
-        {"ID":"2","CEDULA":"1805441292","NOMBRE":"Maria","APELLIDO":"Alvarez","USUARIO":"malvarez","CONTRASENA":"bWFsdmFyZXo=","EMAIL":"malvarez92@gmail.com","ROL":"ASESOR","BANCO":"1"}
-        
-    ],
-
-    "entidadFinanciera": [
-        {"ID":"0","TIPO":"n\/a","NOMBRE":"n\/a","CONSUMO":"0.00","TCONSUMO":"0","MICROCREDITO":"0.00","TMICROCREDITO":"0","VIVIENDA":"0.00","TVIVIENDA":"0","ESTUDIANTIL":"0.00","TESTUDIANTIL":"0"},
-{"ID":"1","TIPO":"BANCO","NOMBRE":"BANCO PICHINCHA","CONSUMO":"15.60","TCONSUMO":"20","MICROCREDITO":"25.12","TMICROCREDITO":"10","VIVIENDA":"8.45","TVIVIENDA":"8","ESTUDIANTIL":"9.39","TESTUDIANTIL":"30"},
-{"ID":"2","TIPO":"COOPERATIVA","NOMBRE":"CAMARA DE COMERCIO AMBATO","CONSUMO":"15.20","TCONSUMO":"30","MICROCREDITO":"19.99","TMICROCREDITO":"8","VIVIENDA":"9.50","TVIVIENDA":"18","ESTUDIANTIL":"12.20","TESTUDIANTIL":"25"},
-{"ID":"3","TIPO":"COOPERATIVA","NOMBRE":"COOPERATIVA AMBATO","CONSUMO":"17.30","TCONSUMO":"20","MICROCREDITO":"28.50","TMICROCREDITO":"20","VIVIENDA":"11.33","TVIVIENDA":"20","ESTUDIANTIL":"9.50","TESTUDIANTIL":"20"},
-{"ID":"4","TIPO":"BANCO","NOMBRE":"BANCO DEL PACIFICO","CONSUMO":"16.22","TCONSUMO":"12","MICROCREDITO":"20.13","TMICROCREDITO":"17","VIVIENDA":"8.99","TVIVIENDA":"18","ESTUDIANTIL":"8.87","TESTUDIANTIL":"26"}
-    ]
+  "usuarios": [
+    {
+      "CEDULA": "1234567890",
+      "NOMBRE": "Juan",
+      "APELLIDO": "Perez",
+      "USUARIO": "jperez",
+      "CONTRASENA": "123456",
+      "EMAIL": "jperez@example.com",
+      "ROL": "ASESOR",
+      "BANCO": "1",
+      "id": "2"
+    },
+    {
+      "CEDULA": "1234567890",
+      "NOMBRE": "Juan",
+      "APELLIDO": "Perez",
+      "USUARIO": "jperez",
+      "CONTRASENA": "123456",
+      "EMAIL": "jperez@example.com",
+      "ROL": "ASESOR",
+      "BANCO": "1",
+      "id": "PWQnr0v"
+    }
+  ],
+  "entidadFinanciera": [
+    {
+      "id": "0",
+      "TIPO": "n/a",
+      "NOMBRE": "n/a",
+      "CONSUMO": "0.00",
+      "TCONSUMO": "0",
+      "MICROCREDITO": "0.00",
+      "TMICROCREDITO": "0",
+      "VIVIENDA": "0.00",
+      "TVIVIENDA": "0",
+      "ESTUDIANTIL": "0.00",
+      "TESTUDIANTIL": "0"
+    },
+    {
+      "id": "1",
+      "TIPO": "BANCO",
+      "NOMBRE": "BANCO PICHINCHA",
+      "CONSUMO": "15.60",
+      "TCONSUMO": "20",
+      "MICROCREDITO": "25.12",
+      "TMICROCREDITO": "10",
+      "VIVIENDA": "8.45",
+      "TVIVIENDA": "8",
+      "ESTUDIANTIL": "9.39",
+      "TESTUDIANTIL": "30"
+    },
+    {
+      "id": "2",
+      "TIPO": "COOPERATIVA",
+      "NOMBRE": "CAMARA DE COMERCIO AMBATO",
+      "CONSUMO": "15.20",
+      "TCONSUMO": "30",
+      "MICROCREDITO": "19.99",
+      "TMICROCREDITO": "8",
+      "VIVIENDA": "9.50",
+      "TVIVIENDA": "18",
+      "ESTUDIANTIL": "12.20",
+      "TESTUDIANTIL": "25"
+    },
+    {
+      "id": "3",
+      "TIPO": "COOPERATIVA",
+      "NOMBRE": "COOPERATIVA AMBATO",
+      "CONSUMO": "17.30",
+      "TCONSUMO": "20",
+      "MICROCREDITO": "28.50",
+      "TMICROCREDITO": "20",
+      "VIVIENDA": "11.33",
+      "TVIVIENDA": "20",
+      "ESTUDIANTIL": "9.50",
+      "TESTUDIANTIL": "20"
+    },
+    {
+      "id": "4",
+      "TIPO": "BANCO",
+      "NOMBRE": "BANCO DEL PACIFICO",
+      "CONSUMO": "16.22",
+      "TCONSUMO": "12",
+      "MICROCREDITO": "20.13",
+      "TMICROCREDITO": "17",
+      "VIVIENDA": "8.99",
+      "TVIVIENDA": "18",
+      "ESTUDIANTIL": "8.87",
+      "TESTUDIANTIL": "26"
+    }
+  ]
 }
