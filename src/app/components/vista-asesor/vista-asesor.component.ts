@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit , Input} from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { ImpresionService } from 'src/app/services/impresion.service';
 import { ServicioService } from 'src/app/servicio.service';
 
 declare var window:any;
@@ -29,11 +30,11 @@ export class VistaAsesorComponent implements OnInit{
   monto:any;
   amortizacion: any[] = [];
   
- 
+  tablaI: any[] = [];
  
 
 
-  constructor(private service: ServicioService, private router: Router, private http: HttpClient){
+  constructor(private service: ServicioService, private router: Router, private http: HttpClient, private srvImpresion:ImpresionService){
     this.identificador=service.getObservable;
   }
   
@@ -198,15 +199,43 @@ capturarAmortizacion() {
         saldo: saldo.toFixed(2),
         interesTotal: interesTotal.toFixed(2)
       };
-  
       this.amortizacion.push(fila);
+    
+    
+      
     }
   }
   
 
   
   
+//imprimir
 
+onImprimir(){
+  /*
+  const tabla = document.getElementById('miTabla');
+  const filas = tabla ? tabla.getElementsByTagName('tr') : [];
+ 
+  const data = [];
+  for (let i = 0; i < filas.length; i++) {
+    const celdas = filas[i].getElementsByTagName('td');
+    const rowData = [];
+
+    for (let j = 0; j < celdas.length; j++) {
+      const valor = celdas[j].textContent?.trim() ?? 'N/A';
+      rowData.push(valor); // Agregar el valor como un elemento separado en rowData
+    }
+
+    data.push(rowData);
+  }
+
+  const columns = Array.from({ length: data.length > 0 ? data[0].length : 0 }, (_, index) => `Columna ${index + 1}`);
+*/
+
+  const encabezado=["Mes", "Cuota", "Interés", "Capital", "Saldo"]
+  
+  this.srvImpresion.imprimir(encabezado, this.amortizacion, "Tabla de Amortización", true);
+}
 
 }
 
