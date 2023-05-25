@@ -1,0 +1,35 @@
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+  }
+  .login-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 5px;
+    width: 400px; /* Ajusta el ancho del formulario según tus necesidades */
+  }
+  
+  .login-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .login-form label {
+    font-weight: bold;
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .login-form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+  }
