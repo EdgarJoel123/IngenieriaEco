@@ -4,8 +4,8 @@
       "CEDULA": "1234567890",
       "NOMBRE": "Juan",
       "APELLIDO": "Perez",
-      "USUARIO": "jperez",
-      "CONTRASENA": "123456",
+      "USUARIO": "edgar",
+      "CONTRASENA": "1234",
       "EMAIL": "jperez@example.com",
       "ROL": "ASESOR",
       "BANCO": "1",
@@ -15,10 +15,10 @@
       "CEDULA": "1234567890",
       "NOMBRE": "Juan",
       "APELLIDO": "Perez",
-      "USUARIO": "jperez",
+      "USUARIO": "noelia",
       "CONTRASENA": "123456",
       "EMAIL": "jperez@example.com",
-      "ROL": "ASESOR",
+      "ROL": "ADMIN",
       "BANCO": "1",
       "id": "PWQnr0v"
     }
