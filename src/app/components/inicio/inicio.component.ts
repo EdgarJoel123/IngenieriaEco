@@ -8,40 +8,53 @@ import { HttpClient } from '@angular/common/http';
 })
 export class InicioComponent implements OnInit {
 
-  tiposPrestamo: any[];
-  selectedEntidad: any;
-  entidadesFinancieras: any[];
-  selectedTipo: string = '';
-  entidadSeleccionada: any;
+  entidadFinancieraData: any[];
+  selectedEntidadFinanciera: any;
+  selectedValue: string = '';
+  selectedData: any;
+
+  opcionesPrestamo: any = {
+    CONSUMO: "CONSUMO",
+    MICROCREDITO: "MICROCREDITO",
+    VIVIENDA: "VIVIENDA",
+    ESTUDIANTIL: "ESTUDIANTIL"
+  };
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.cargarEntidadesFinancieras();
+    this.obtenerEntidadFinanciera();
+    this.selectedEntidadFinanciera = this.entidadFinancieraData[0];
+    this.selectedValue = this.selectedEntidadFinanciera.id;
+    this.selectedData = this.getSelectedEntidadFinancieraData();
   }
-
-  cargarEntidadesFinancieras() {
+  
+  getKeys(obj: any): string[] {
+    return Object.keys(obj);
+  }
+  
+  obtenerEntidadFinanciera() {
     this.http.get<any[]>('http://localhost:3000/entidadFinanciera').subscribe(data => {
-      this.entidadesFinancieras = data;
+      this.entidadFinancieraData = data;
     });
   }
 
-  cargarTiposPrestamo() {
-    if (this.selectedEntidad) {
-      this.entidadSeleccionada = this.entidadesFinancieras.find(entidad => entidad.id === this.selectedEntidad);
-      this.tiposPrestamo = Object.entries(this.entidadSeleccionada)
-        .filter(([key, value]) => key.startsWith('T'))
-        .map(([key, value]) => ({ tipo: key.slice(1), valor: value }));
-    } else {
-      this.tiposPrestamo = [];
-      this.entidadSeleccionada = null;
-    }
-  }
+  // Actualizar la función onSelectEntidadFinanciera
+onSelectEntidadFinanciera(event: any) {
+  const id = event.target.value;
+  this.selectedEntidadFinanciera = this.entidadFinancieraData.find(entidad => entidad.id === id);
+  this.selectedValue = this.opcionesPrestamo.CONSUMO; // Establecer el valor predeterminado del segundo select
+}
 
-  obtenerPorcentaje(selectedTipo: string): string {
-    if (this.entidadSeleccionada) {
-      return this.entidadSeleccionada[selectedTipo];
+  getSelectedEntidadFinancieraData(): any[] {
+    if (this.selectedEntidadFinanciera) {
+      return Object.entries(this.selectedEntidadFinanciera)
+        .filter(([key, value]) => key !== 'id' && key !== 'TIPO' && key !== 'NOMBRE')
+        .map(([key, value]) => ({ key: key, value: value }));
     }
-    return '';
+    return [];
   }
+  
+  
+  
 }
