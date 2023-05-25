@@ -9,8 +9,7 @@ import { VistaAdminComponent } from './components/vista-admin/vista-admin.compon
 import { VistaAsesorComponent } from './components/vista-asesor/vista-asesor.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatIconModule} from '@angular/material/icon';
-import {MatToolbarModule} from '@angular/material/toolbar';
+
 
 @NgModule({
   declarations: [
@@ -18,13 +17,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     InicioComponent,
     LoginComponent,
     VistaAdminComponent,
-    VistaAsesorComponent
+    VistaAsesorComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-   MatToolbarModule, MatIconModule,
+ 
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
