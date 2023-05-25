@@ -1,0 +1,13 @@
+.example-icon {
+    padding: px;
+  }
+.example-spacer {
+    flex: auto;
+  }
+
+.toolbar{
+    color: d55Color;
+    background-color: whiteColor;
+    display: flex;
+    justify-content: center;
+  }
