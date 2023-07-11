@@ -1,27 +1,39 @@
-# ProyectoIE
+## Table of Contents
+1. [General Info](#general-info)
+2. [Technologies](#technologies)
+3. [Installation](#installation)
+4. [Collaboration](#collaboration)
+### 📝 General Info
+***
+This system is a career project that consists of a simulation system to calculate French and German amortization. It includes three user roles. However, the system is incomplete as the administrator's form has not been finished yet.
+### Screenshot
+![Screenshot_1](https://github.com/EdgarJoel123/IngenieriaEco/assets/73723298/4d462bde-a964-4f4d-ba51-b7bd36fee291)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+![Screenshot_2](https://github.com/EdgarJoel123/IngenieriaEco/assets/73723298/8eee14c1-e03a-40a4-9ae2-cd93c4861fa2)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 📊 Technologies
 
-## Code scaffolding
+***A list of technologies used within the project:
+* [Angular CLI](https://example.com](https://angular.io/cli)): Version 16.0.1
+* [Node](https://example.com](https://nodejs.org/en)): Version 18.16.0
+* [Sprint Boot](https://spring.io/projects/spring-boot): Version 2.7
+* APIS json 
+## 💻 Installation
+***
+A little intro about the installation. 
+```
+$ git clone https://github.com/EdgarJoel123/proyectoDP.git](https://github.com/EdgarJoel123/IngenieriaEco.git
+$ cd ../path/to/the/file
+$ npm install
+$ npm install -g json-server
+$ npm install -g json-server
+$ json-server base.son
+$ ng serve
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+## Collaboration
+***
+We would greatly appreciate your assistance in improving the interface's usability and the forms for the administrator and, to some extent, for the manager role.
+> It should go over several rows?
+> This is how you do it.
