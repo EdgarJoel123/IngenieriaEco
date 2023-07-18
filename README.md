@@ -1,9 +1,9 @@
 ## Table of Contents
-1. [General Info](#general-info)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
-4. [Collaboration](#collaboration)
-### 📝 General Info
+1. 📝 [General Info](#general-info)
+2. 📊 [Technologies](#technologies)
+3. 💻 [Installation](#installation)
+4. 👥 [Collaboration](#collaboration)
+### General Info
 ***
 This system is a career project that consists of a simulation system to calculate French and German amortization. It includes three user roles. However, the system is incomplete as the administrator's form has not been finished yet.
 ### Screenshot
@@ -12,14 +12,13 @@ This system is a career project that consists of a simulation system to calculat
 ![Screenshot_2](https://github.com/EdgarJoel123/IngenieriaEco/assets/73723298/8eee14c1-e03a-40a4-9ae2-cd93c4861fa2)
 
 
-## 📊 Technologies
+## Technologies
 
 ***A list of technologies used within the project:
 * [Angular CLI](https://example.com](https://angular.io/cli)): Version 16.0.1
 * [Node](https://example.com](https://nodejs.org/en)): Version 18.16.0
-* [Sprint Boot](https://spring.io/projects/spring-boot): Version 2.7
-* APIS json 
-## 💻 Installation
+* [APIS json](http://apisjson.org/)
+## Installation
 ***
 A little intro about the installation. 
 ```
@@ -35,5 +34,4 @@ $ ng serve
 ## Collaboration
 ***
 We would greatly appreciate your assistance in improving the interface's usability and the forms for the administrator and, to some extent, for the manager role.
-> It should go over several rows?
-> This is how you do it.
+
